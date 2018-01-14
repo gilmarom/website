@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const expressJwt = require('express-jwt');
-const favicon = require('express-favicon');
+
 const port = 5000;
 const app = express();
 const http = require('http');//.Server(app);
@@ -13,7 +13,7 @@ const contacts = require('./routes/contacts');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-app.use(favicon(__dirname + '/public/favicon.png'));
+
 // Set Static Folder
 
 app.use(express.static(path.join(__dirname, 'public')));
